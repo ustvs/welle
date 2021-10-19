@@ -122,91 +122,91 @@ END
 
 IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
 BEGIN
-    POPUP "&Файл"
+    POPUP "&File"
     BEGIN
-        MENUITEM "&Новый\tCtrl+N",              ID_FILE_NEW
-        MENUITEM "&Открыть...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "&New\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",         ID_FILE_OPEN
         MENUITEM SEPARATOR
-        MENUITEM "Пара&метры страницы...",      ID_FILE_PRINT_SETUP
+        MENUITEM "Page Para&meters...",      ID_FILE_PRINT_SETUP
         MENUITEM SEPARATOR
-        MENUITEM "В&ыход",                      ID_APP_EXIT
+        MENUITEM "E&xit",                      ID_APP_EXIT
     END
-    POPUP "&Вид"
+    POPUP "&View"
     BEGIN
-        MENUITEM "&Панель инструментов",        ID_VIEW_TOOLBAR
-        MENUITEM "&Статусная строка",           ID_VIEW_STATUS_BAR
+        MENUITEM "&Toolbar",        ID_VIEW_TOOLBAR
+        MENUITEM "&Status bar",           ID_VIEW_STATUS_BAR
     END
-    POPUP "&Помощь"
+    POPUP "&Help"
     BEGIN
-        MENUITEM "&О программе...",             ID_APP_ABOUT
+        MENUITEM "&About...",             ID_APP_ABOUT
     END
 END
 
 IDR_MDIVOLTYPE MENU PRELOAD DISCARDABLE 
 BEGIN
-    POPUP "&Файл"
+    POPUP "&File"
     BEGIN
-        MENUITEM "&Новый\tCtrl+N",              ID_FILE_NEW
-        MENUITEM "&Открыть...\tCtrl+O",         ID_FILE_OPEN
-        MENUITEM "&Закрыть",                    ID_FILE_CLOSE
-        MENUITEM "&Сохранить\tCtrl+S",          ID_FILE_SAVE
-        MENUITEM "Сохранить &как...",           ID_FILE_SAVE_AS
+        MENUITEM "&New\tCtrl+N",               ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&Close",                     ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "Save &as...",                ID_FILE_SAVE_AS
         MENUITEM SEPARATOR
-        MENUITEM "&Печать...\tCtrl+P",          ID_FILE_PRINT
-        MENUITEM "Пред&варительный просмотр",   ID_FILE_PRINT_PREVIEW
-        MENUITEM "Пара&метры страницы...",      ID_FILE_PRINT_SETUP
+        MENUITEM "&Print...\tCtrl+P",          ID_FILE_PRINT
+        MENUITEM "Print Preview",   ID_FILE_PRINT_PREVIEW
+        MENUITEM "Print setup...",      ID_FILE_PRINT_SETUP
         MENUITEM SEPARATOR
-        MENUITEM "В&ыход",                      ID_APP_EXIT
+        MENUITEM "E&xit",                      ID_APP_EXIT
     END
-    POPUP "&Параметры"
+    POPUP "&Parameters"
     BEGIN
-        MENUITEM "&Волновода...\tCtrl+F1",      ID_EDIT_VOLNOVOD
-        MENUITEM "&Излучения...\tCtrl+F2",      ID_EDIT_IZLU
-        MENUITEM "&Выбор типа моды...\tCtrl+F3", ID_EDIT_ANDEREN
+        MENUITEM "&Waveguide...\tCtrl+F1",      ID_EDIT_VOLNOVOD
+        MENUITEM "&Emission...\tCtrl+F2",      ID_EDIT_IZLU
+        MENUITEM "&Type of waveguide mode...\tCtrl+F3", ID_EDIT_ANDEREN
     END
-    POPUP "&Вид"
+    POPUP "&View"
     BEGIN
-        MENUITEM "Графическое решение\tShift+F1", ID_VIEW_GRAF
-        MENUITEM "Сечение моды\tShift+F2",      ID_VIEW_MODE
-        POPUP "Фазовые сдвиги"
+        MENUITEM "Graphic solution\tShift+F1", ID_VIEW_GRAF
+        MENUITEM "Cross Section\tShift+F2",      ID_VIEW_MODE
+        POPUP "Phase shifts"
         BEGIN
-            MENUITEM "два графика\tShift+F3",       ID_VIEW_TE_TM
-            MENUITEM "один график \tShift+F4",      ID_VIEW_TE_TM_1
+            MENUITEM "Two graphs\tShift+F3",       ID_VIEW_TE_TM
+            MENUITEM "One graph \tShift+F4",      ID_VIEW_TE_TM_1
         END
-        MENUITEM "Численное решение\tShift+F5", ID_VIEW_DIGITAL
-        MENUITEM "&Панель инструментов",        ID_VIEW_TOOLBAR
-        MENUITEM "&Статусная строка",           ID_VIEW_STATUS_BAR
-        MENUITEM "Обновить",                    ID_VIEW_REFRESH
+        MENUITEM "Numerical solution\tShift+F5", ID_VIEW_DIGITAL
+        MENUITEM "&Toolbar",        ID_VIEW_TOOLBAR
+        MENUITEM "&Satus bar",           ID_VIEW_STATUS_BAR
+        MENUITEM "Refresh",                    ID_VIEW_REFRESH
     END
-    POPUP "&Окно"
+    POPUP "&Windows"
     BEGIN
-        MENUITEM "&Новое окно",                 ID_WINDOW_NEW
-        MENUITEM "&Каскадом",                   ID_WINDOW_CASCADE
-        MENUITEM "&Разделить",                  ID_WINDOW_TILE_HORZ
+        MENUITEM "&New",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                   ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                  ID_WINDOW_TILE_HORZ
     END
-    POPUP "&Помощь"
+    POPUP "&Help"
     BEGIN
-        MENUITEM "&О программе...",             ID_APP_ABOUT
+        MENUITEM "&About...",             ID_APP_ABOUT
     END
 END
 
 IDR_MENU1 MENU DISCARDABLE 
 BEGIN
-    POPUP "Контекстное меню"
+    POPUP "Context menu"
     BEGIN
-        MENUITEM "Параметры волновода...",      ID_EDIT_VOLNOVOD
-        MENUITEM "Параметры излучения...",      ID_EDIT_IZLU
-        MENUITEM "Параметры моды...",           ID_EDIT_ANDEREN
+        MENUITEM "Waveguide parameters...",      ID_EDIT_VOLNOVOD
+        MENUITEM "Wave parameters...",      ID_EDIT_IZLU
+        MENUITEM "Mode parameters...",           ID_EDIT_ANDEREN
         MENUITEM SEPARATOR
-        MENUITEM "Графическое решение\tShift+F1", ID_VIEW_GRAF
-        MENUITEM "Сечение моды\tShift+F2",      ID_VIEW_MODE
-        POPUP "Фазовые сдвиги"
+        MENUITEM "Graphical solution\tShift+F1", ID_VIEW_GRAF
+        MENUITEM "Cross section\tShift+F2",      ID_VIEW_MODE
+        POPUP "Phase shifts"
         BEGIN
-            MENUITEM "два графика\tShift+F3",       ID_VIEW_TE_TM
-            MENUITEM "один график \tShift+F4",      ID_VIEW_TE_TM_1
+            MENUITEM "Two graphs\tShift+F3",       ID_VIEW_TE_TM
+            MENUITEM "One graph \tShift+F4",      ID_VIEW_TE_TM_1
         END
-        MENUITEM "Численное решение\tShift+F5", ID_VIEW_DIGITAL
-        MENUITEM "Обновить",                    ID_VIEW_REFRESH
+        MENUITEM "Numerical solution\tShift+F5", ID_VIEW_DIGITAL
+        MENUITEM "Refresh",                    ID_VIEW_REFRESH
     END
 END
 
@@ -218,7 +218,7 @@ END
 
 IDD_DLG_SETUP_VOLNOVOD DIALOG DISCARDABLE  0, 0, 192, 161
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Параметры волновода"
+CAPTION "ГЏГ Г°Г Г¬ГҐГІГ°Г» ГўГ®Г«Г­Г®ГўГ®Г¤Г "
 FONT 8, "MS Sans Serif"
 BEGIN
     PUSHBUTTON      "OK",IDOK,76,140,50,14
@@ -227,84 +227,84 @@ BEGIN
     EDITTEXT        IDC_EDIT2,128,32,40,12
     EDITTEXT        IDC_EDIT3,128,47,40,12
     EDITTEXT        IDC_EDIT4,128,81,40,12
-    GROUPBOX        "Коэффициенты преломления",IDC_STATIC,7,7,178,60
-    GROUPBOX        "Толщина",IDC_STATIC,7,70,178,30
-    LTEXT           "покровного слоя:",IDC_STATIC,23,20,90,8
-    LTEXT           "пленки:",IDC_STATIC,23,34,90,8
-    LTEXT           "подложки:",IDC_STATIC,23,48,90,8
-    LTEXT           "пленки (мкм):",IDC_STATIC,23,83,98,8
-    GROUPBOX        "Порядок моды",IDC_STATIC,7,103,178,30
+    GROUPBOX        "refractive index",IDC_STATIC,7,7,178,60
+    GROUPBOX        "Thickness",IDC_STATIC,7,70,178,30
+    LTEXT           "cover layer:",IDC_STATIC,23,20,90,8
+    LTEXT           "film:",IDC_STATIC,23,34,90,8
+    LTEXT           "substrate:",IDC_STATIC,23,48,90,8
+    LTEXT           "film (Ојm):",IDC_STATIC,23,83,98,8
+    GROUPBOX        "Mode order",IDC_STATIC,7,103,178,30
     EDITTEXT        IDC_EDIT5,128,113,40,12
-    LTEXT           "порядок моды:",IDC_STATIC,24,115,81,8
-    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,140,50,14
+    LTEXT           "Mode order:",IDC_STATIC,24,115,81,8
+    PUSHBUTTON      "Help",IDC_BUTTON_HELP,7,140,50,14
 END
 
 IDD_DLG_SETUP_IZLU DIALOG DISCARDABLE  0, 0, 186, 111
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Параметры излучения"
+CAPTION "Wave parameters"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,69,90,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,129,90,50,14
     GROUPBOX        "",IDC_STATIC,7,1,172,48
     EDITTEXT        IDC_EDIT1,125,13,40,12,ES_AUTOHSCROLL
-    LTEXT           "длина волны (мк):",IDC_STATIC,19,15,78,9
+    LTEXT           "wavelength (Ојm):",IDC_STATIC,19,15,78,9
     EDITTEXT        IDC_EDIT2,125,28,40,12,ES_AUTOHSCROLL
-    LTEXT           "интенсивность:",IDC_STATIC,19,29,72,8
-    GROUPBOX        "Тип волны",IDC_STATIC,7,52,172,31
-    CONTROL         "ТЕ - волна",IDC_RADIO_TE,"Button",BS_AUTORADIOBUTTON | 
+    LTEXT           "Intensity:",IDC_STATIC,19,29,72,8
+    GROUPBOX        "Wave type",IDC_STATIC,7,52,172,31
+    CONTROL         "TE wave",IDC_RADIO_TE,"Button",BS_AUTORADIOBUTTON | 
                     WS_GROUP,22,64,51,10
-    CONTROL         "ТМ - волна",IDC_RADIO_TM,"Button",BS_AUTORADIOBUTTON,
+    CONTROL         "TM wave",IDC_RADIO_TM,"Button",BS_AUTORADIOBUTTON,
                     110,64,53,10
 END
 
 IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 209, 130
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "О программе..."
+CAPTION "About..."
 FONT 8, "MS Sans Serif"
 BEGIN
     CONTROL         187,IDC_STATIC,"Static",SS_BITMAP,113,8,83,66
-    LTEXT           "Расчет планарного волновода версия 3.0",IDC_STATIC,7,7,
+    LTEXT           "Calculation of the planar waveguide 3.0",IDC_STATIC,7,7,
                     107,15,SS_NOPREFIX
-    LTEXT           "Copyright (C) ИАиЭ СО РАН 2000 г.",IDC_STATIC,45,98,119,
+    LTEXT           "Copyright (C) IA&E Russian Academy of sciences 2000 ГЈ.",IDC_STATIC,45,98,119,
                     8
     DEFPUSHBUTTON   "OK",IDOK,80,113,50,14,WS_GROUP
-    LTEXT           "Разработчики программы:\nМалышев А. А.\nУстинов В. Б.",
+    LTEXT           "Developers of the program: \ nMalyshev A.A. \ nUstinov V. B.",
                     IDC_STATIC,7,36,101,27
-    LTEXT           """Лаборатория оптических информационных систем""",
+    LTEXT           """Laboratory of optical information systems""",
                     IDC_STATIC,14,86,180,8
 END
 
 IDD_DLG_ANDEREN DIALOG DISCARDABLE  0, 0, 303, 143
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Моды в волноводе"
+CAPTION "ГЊГ®Г¤Г» Гў ГўГ®Г«Г­Г®ГўГ®Г¤ГҐ"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,177,122,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,246,122,50,14
-    GROUPBOX        "Выберете моду",IDC_STATIC,7,7,289,79
-    CONTROL         "волноводная",IDC_RADIO_F,"Button",BS_AUTORADIOBUTTON | 
+    GROUPBOX        "Г‚Г»ГЎГҐГ°ГҐГІГҐ Г¬Г®Г¤Гі",IDC_STATIC,7,7,289,79
+    CONTROL         "ГўГ®Г«Г­Г®ГўГ®Г¤Г­Г Гї",IDC_RADIO_F,"Button",BS_AUTORADIOBUTTON | 
                     WS_GROUP,18,18,60,10
-    CONTROL         "покровный слой - пленка (излучательная)",IDC_RADIO_CF,
+    CONTROL         "covering layer - film (radiation)",IDC_RADIO_CF,
                     "Button",BS_AUTORADIOBUTTON,18,43,157,10
-    CONTROL         "пленка - подложка (излучательная)",IDC_RADIO_FS,"Button",
+    CONTROL         "film - substrate (radiant)",IDC_RADIO_FS,"Button",
                     BS_AUTORADIOBUTTON,18,68,135,10
     CONTROL         139,IDC_STAT,"Static",SS_BITMAP,175,14,116,68
-    LTEXT           "Введите угол распространения:",IDC_STATIC,67,99,109,15
+    LTEXT           "Enter the spreading angle:",IDC_STATIC,67,99,109,15
     EDITTEXT        IDC_EDIT1,209,97,50,12
-    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,122,50,14
+    PUSHBUTTON      "Help",IDC_BUTTON_HELP,7,122,50,14
 END
 
 IDD_DLG_INPUT_UGOL DIALOG DISCARDABLE  0, 0, 176, 52
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Допольный параметр"
+CAPTION "Г„Г®ГЇГ®Г«ГјГ­Г»Г© ГЇГ Г°Г Г¬ГҐГІГ°"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,63,31,50,14
-    LTEXT           "Введите угол распространения ",IDC_STATIC,7,8,109,8
+    LTEXT           "Enter the angle of spread ",IDC_STATIC,7,8,109,8
     EDITTEXT        IDC_EDIT1,129,7,40,12
-    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,31,50,14
-    PUSHBUTTON      "Отмена",IDCANCEL,119,31,50,14
+    PUSHBUTTON      "Help",IDC_BUTTON_HELP,7,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,119,31,50,14
 END
 
 
@@ -366,14 +366,14 @@ END
 
 STRINGTABLE PRELOAD DISCARDABLE 
 BEGIN
-    IDR_MAINFRAME           "Планарный волновод"
-    IDR_MDIVOLTYPE          "Демонстрационная программа\nwelle\nWelle.Document\nWelle Type (*.wel)\n.wel\nWelle\nWelle File"
+    IDR_MAINFRAME           "Planar waveguide"
+    IDR_MDIVOLTYPE          "Demo program\nwelle\nWelle.Document\nWelle Type (*.wel)\n.wel\nWelle\nWelle File"
 END
 
 STRINGTABLE PRELOAD DISCARDABLE 
 BEGIN
-    AFX_IDS_APP_TITLE       "Планарный волновод"
-    AFX_IDS_IDLEMESSAGE     "Готово"
+    AFX_IDS_APP_TITLE       "Planar waveguide"
+    AFX_IDS_IDLEMESSAGE     "Done"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -388,21 +388,21 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_FILE_NEW             "Создать новый документ\nНовый"
-    ID_FILE_OPEN            "Открыть существующий документ\nОткрыть"
-    ID_FILE_CLOSE           "Закрыть активный документ\nЗакрыть"
-    ID_FILE_SAVE            "Сохранить активный документ\nСохранить"
-    ID_FILE_SAVE_AS         "Сохранить активный документ с новым именем\nСохранить как"
+    ID_FILE_NEW             "Create"
+    ID_FILE_OPEN            "Open"
+    ID_FILE_CLOSE           "Close"
+    ID_FILE_SAVE            "Save"
+    ID_FILE_SAVE_AS         "Save as"
     ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
-    ID_FILE_PRINT_SETUP     "Изменение принтера и параметров печати\nНастройка печати"
-    ID_FILE_PRINT           "Печатать активный документ\nПечать"
-    ID_FILE_PRINT_PREVIEW   "Показать полную страницу\nПросмотр печати."
+    ID_FILE_PRINT_SETUP     "Print Setup"
+    ID_FILE_PRINT           "Print"
+    ID_FILE_PRINT_PREVIEW   "Print preview"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_APP_ABOUT            "Информация о программе и авторах\nО программе"
-    ID_APP_EXIT             "Выход из приложения; запрос на сохранение документа\nВыход"
+    ID_APP_ABOUT            "Information about the program and authors\nAbout the program"
+    ID_APP_EXIT             "Exit from the application; Request to save document\nOutput"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -433,10 +433,10 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_WINDOW_NEW           "Открыть другое окно для активного документа\nНовое окно"
+    ID_WINDOW_NEW           "Open new windows"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
-    ID_WINDOW_CASCADE       "Распределить окна как перекрывающиеся\nКаскадом"
-    ID_WINDOW_TILE_HORZ     "Распределить окна как неперекрывающиеся части\nРазделить окна"
+    ID_WINDOW_CASCADE       "Cascade Windows"
+    ID_WINDOW_TILE_HORZ     "Tile Horizontally"
     ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
@@ -458,8 +458,8 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_VIEW_TOOLBAR         "Показать или скрыть панель инструментов\n"
-    ID_VIEW_STATUS_BAR      "Показать или скрыть статусную строку\n"
+    ID_VIEW_TOOLBAR         "Show/Hide Toolbar\n"
+    ID_VIEW_STATUS_BAR      "Show/Hide Statusbar\n"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -487,21 +487,21 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_EDIT_VOLNOVOD        "Параметры волновода"
-    ID_EDIT_IZLU            "Параметры излучения"
-    ID_EDIT_ANDEREN         "Тип моды: волноводная, излучательная."
-    ID_VIEW_GFAF            "Показывает графическое решение нахождения угла распространения волны в волноводе"
-    ID_                     "Показывает вид моды в поперечном сечении волновода"
-    ID_VIEW_MODE            "Показывает поперечное сечение моды в волноводе"
-    ID_VIEW_GRAF            "Графическое решение."
-    ID_VIEW_REFRESH         "Обновляет текущий вид окна"
-    ID_VIEW_TE_TM_1         "Зависимость фазовых сдвигов от угла распространения"
-    ID_VIEW_TE_TM           "Зависимость фазовых сдвигов от угла распространения"
+    ID_EDIT_VOLNOVOD        "Waveguide parameters"
+    ID_EDIT_IZLU            "Wave parameters"
+    ID_EDIT_ANDEREN         "Mode type:waveguide, radiant."
+    ID_VIEW_GFAF            "Shows a graphical solution for finding the angle of wave propagation in the waveguide"
+    ID_                     "Shows the view of the mode in the cross section of the waveguide"
+    ID_VIEW_MODE            "Shows the cross section of the mode in the waveguide"
+    ID_VIEW_GRAF            "Graphic solution."
+    ID_VIEW_REFRESH         "Refreshes the current view of the window"
+    ID_VIEW_TE_TM_1         "Dependence of phase shifts on angle of spread"
+    ID_VIEW_TE_TM           "Dependence of phase shifts on angle of spread"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_VIEW_DIGITAL         "Показывает численное решение дисперсионного уравнения\n"
+    ID_VIEW_DIGITAL         "Shows the numerical solution to the dispersion equation\n"
 END
 
 #endif    // Russian resources
