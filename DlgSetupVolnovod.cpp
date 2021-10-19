@@ -84,7 +84,7 @@ void CDlgSetupVolnovod::OnOK()
 	tmp->mode = pDoc->vol.mode;
 
 	double res = tmp->FindenTeta(); 
-//	if(tmp->h > 100e-6 || tmp->h < tmp->lambda/2.) MessageBox("Толщина должна быть соизмерима с длиной волны", "Ошибка ввода значения толщины пленки");
+//	if(tmp->h > 100e-6 || tmp->h < tmp->lambda/2.) MessageBox("The thickness must be commensurate with the wavelength", "Error in entering the film thickness value");
 //	else
 //	{
 		if(tmp->Nf > tmp->Ns)
@@ -93,12 +93,12 @@ void CDlgSetupVolnovod::OnOK()
 				if(!pDoc->vol.mode)
 				{
 					if( res == ERROR_INTERVAL )
-						MessageBox("Недопустимая мода");
+						MessageBox("Invalid waveguide mode");
 					else CDialog::OnOK();
 				}
 				else CDialog::OnOK();
 			}
-		else MessageBox("Введенные  коэффициенты преломления\nнедопустимы. Пожалуйста введите правильные!!");
+		else MessageBox("The entered refractive indices\n are not valid. Please enter the correct ones !!");
 //	}
 	delete []str;
 	delete tmp;
@@ -137,8 +137,8 @@ void CDlgSetupVolnovod::OnButtonHelp()
 	
 	int count =int( 2*tmp->h/tmp->lambda*sqrt(tmp->Nf*tmp->Nf -
 		tmp->Ns*tmp->Ns) );
-	sprintf(str, "Примерное количество волноводных мод: %d", count);
-	MessageBox(str, "Справка",MB_ICONINFORMATION);
+	sprintf(str, "Approximate number of waveguide modes: %d", count);
+	MessageBox(str, "Help",MB_ICONINFORMATION);
 	delete []str;
 	delete tmp;
 }
