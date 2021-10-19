@@ -26,24 +26,24 @@ public:
 	double Xc;
 	double get_mode_amplitude(double);
 	CVolna();
-//	double Teta_min;				// Минимальный угол падения
-	int mode;//		какая мода выбрана: 
-			 //		0 - волноводная,
-			 //		1 - излучательная в обе стороны,
-			 //		2 - излучательная в подложку
-	double lambda;					// Длина волны
-	double    Nf;					// Показатель преломления пленки
-	double    Nc;					// Показатель преломления покровного слоя
-	double    Ns;					// Показатель преломления подложки
-	double	   h;					// Толщина пленки
-	double  Teta;					// Угол падения
-	int		   v;					// Номер моды
-	int type_welle;					// Тип волны: true(1)-TE волна, false(0)-TM волна
+//	double Teta_min;				// Minimum angle of incidence
+	int mode;//		Chosen mode: 
+			 //		0 - Waveguide,
+			 //		1 - radiative in both directions,
+			 //		2 - radiating to substrate
+	double lambda;					// The length of the wave
+	double    Nf;					// Refractive index of the film
+	double    Nc;					// Refractive index of the cover layer
+	double    Ns;					// Refractive index of the substrate
+	double	   h;					// Film thickness
+	double  Teta;					// The angle of incidence
+	int		   v;					// Mode number
+	int type_welle;					// Wave type: true (1) -TE wave, false (0) -TM wave
 	
-//	int Zahle;						// Число мод
-	double h_min;					// Минимальная толщина пленки 
-	double lambda_max;				// Максимальная длина волны
-	double	Amplitude;					// Интенсивность
+//	int Zahle;						// Number of modes
+	double h_min;					// Minimum film thickness
+	double lambda_max;				// Maximum wavelength
+	double	Amplitude;					// Intensity
 
 	double FindenTeta();
 	double Urav(double ugol);
