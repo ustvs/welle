@@ -1,0 +1,632 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MDIVolna.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MDIVOLTYPE          ICON    DISCARDABLE     "res\\MDIVolnaDoc.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\zigzag3.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\zigzag2.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\zigzag1.bmp"
+IDB_FERRARI             BITMAP  DISCARDABLE     "res\\ferrari.bmp"
+IDB_BITMAP_N1           BITMAP  DISCARDABLE     "res\\n1.bmp"
+IDB_BITMAP_N2           BITMAP  DISCARDABLE     "res\\n2.bmp"
+IDB_BITMAP_N3           BITMAP  DISCARDABLE     "res\\n3.bmp"
+IDB_BITMAP_N4           BITMAP  DISCARDABLE     "res\\n4.bmp"
+IDB_BITMAP_H1           BITMAP  DISCARDABLE     "res\\h1.bmp"
+IDB_BITMAP_H2           BITMAP  DISCARDABLE     "res\\h2.bmp"
+IDB_BITMAP_4_PLANE      BITMAP  DISCARDABLE     "res\\4_plane.bmp"
+IDB_BITMAP_S1           BITMAP  DISCARDABLE     "res\\s1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_ANDEREN
+    BUTTON      ID_EDIT_IZLU
+    BUTTON      ID_EDIT_VOLNOVOD
+    BUTTON      ID_VIEW_TE_TM_1
+    BUTTON      ID_VIEW_TE_TM
+    BUTTON      ID_VIEW_MODE
+    BUTTON      ID_VIEW_GRAF
+    BUTTON      ID_VIEW_DIGITAL
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Файл"
+    BEGIN
+        MENUITEM "&Новый\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Открыть...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Пара&метры страницы...",      ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "В&ыход",                      ID_APP_EXIT
+    END
+    POPUP "&Вид"
+    BEGIN
+        MENUITEM "&Панель инструментов",        ID_VIEW_TOOLBAR
+        MENUITEM "&Статусная строка",           ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Помощь"
+    BEGIN
+        MENUITEM "&О программе...",             ID_APP_ABOUT
+    END
+END
+
+IDR_MDIVOLTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Файл"
+    BEGIN
+        MENUITEM "&Новый\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Открыть...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "&Закрыть",                    ID_FILE_CLOSE
+        MENUITEM "&Сохранить\tCtrl+S",          ID_FILE_SAVE
+        MENUITEM "Сохранить &как...",           ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Печать...\tCtrl+P",          ID_FILE_PRINT
+        MENUITEM "Пред&варительный просмотр",   ID_FILE_PRINT_PREVIEW
+        MENUITEM "Пара&метры страницы...",      ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "В&ыход",                      ID_APP_EXIT
+    END
+    POPUP "&Параметры"
+    BEGIN
+        MENUITEM "&Волновода...\tCtrl+F1",      ID_EDIT_VOLNOVOD
+        MENUITEM "&Излучения...\tCtrl+F2",      ID_EDIT_IZLU
+        MENUITEM "&Выбор типа моды...\tCtrl+F3", ID_EDIT_ANDEREN
+    END
+    POPUP "&Вид"
+    BEGIN
+        MENUITEM "Графическое решение\tShift+F1", ID_VIEW_GRAF
+        MENUITEM "Сечение моды\tShift+F2",      ID_VIEW_MODE
+        POPUP "Фазовые сдвиги"
+        BEGIN
+            MENUITEM "два графика\tShift+F3",       ID_VIEW_TE_TM
+            MENUITEM "один график \tShift+F4",      ID_VIEW_TE_TM_1
+        END
+        MENUITEM "Численное решение\tShift+F5", ID_VIEW_DIGITAL
+        MENUITEM "&Панель инструментов",        ID_VIEW_TOOLBAR
+        MENUITEM "&Статусная строка",           ID_VIEW_STATUS_BAR
+        MENUITEM "Обновить",                    ID_VIEW_REFRESH
+    END
+    POPUP "&Окно"
+    BEGIN
+        MENUITEM "&Новое окно",                 ID_WINDOW_NEW
+        MENUITEM "&Каскадом",                   ID_WINDOW_CASCADE
+        MENUITEM "&Разделить",                  ID_WINDOW_TILE_HORZ
+    END
+    POPUP "&Помощь"
+    BEGIN
+        MENUITEM "&О программе...",             ID_APP_ABOUT
+    END
+END
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "Контекстное меню"
+    BEGIN
+        MENUITEM "Параметры волновода...",      ID_EDIT_VOLNOVOD
+        MENUITEM "Параметры излучения...",      ID_EDIT_IZLU
+        MENUITEM "Параметры моды...",           ID_EDIT_ANDEREN
+        MENUITEM SEPARATOR
+        MENUITEM "Графическое решение\tShift+F1", ID_VIEW_GRAF
+        MENUITEM "Сечение моды\tShift+F2",      ID_VIEW_MODE
+        POPUP "Фазовые сдвиги"
+        BEGIN
+            MENUITEM "два графика\tShift+F3",       ID_VIEW_TE_TM
+            MENUITEM "один график \tShift+F4",      ID_VIEW_TE_TM_1
+        END
+        MENUITEM "Численное решение\tShift+F5", ID_VIEW_DIGITAL
+        MENUITEM "Обновить",                    ID_VIEW_REFRESH
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_SETUP_VOLNOVOD DIALOG DISCARDABLE  0, 0, 192, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Параметры волновода"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,76,140,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,140,50,14
+    EDITTEXT        IDC_EDIT1,128,17,40,12
+    EDITTEXT        IDC_EDIT2,128,32,40,12
+    EDITTEXT        IDC_EDIT3,128,47,40,12
+    EDITTEXT        IDC_EDIT4,128,81,40,12
+    GROUPBOX        "Коэффициенты преломления",IDC_STATIC,7,7,178,60
+    GROUPBOX        "Толщина",IDC_STATIC,7,70,178,30
+    LTEXT           "покровного слоя:",IDC_STATIC,23,20,90,8
+    LTEXT           "пленки:",IDC_STATIC,23,34,90,8
+    LTEXT           "подложки:",IDC_STATIC,23,48,90,8
+    LTEXT           "пленки (мкм):",IDC_STATIC,23,83,98,8
+    GROUPBOX        "Порядок моды",IDC_STATIC,7,103,178,30
+    EDITTEXT        IDC_EDIT5,128,113,40,12
+    LTEXT           "порядок моды:",IDC_STATIC,24,115,81,8
+    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,140,50,14
+END
+
+IDD_DLG_SETUP_IZLU DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Параметры излучения"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,90,50,14
+    GROUPBOX        "",IDC_STATIC,7,1,172,48
+    EDITTEXT        IDC_EDIT1,125,13,40,12,ES_AUTOHSCROLL
+    LTEXT           "длина волны (мк):",IDC_STATIC,19,15,78,9
+    EDITTEXT        IDC_EDIT2,125,28,40,12,ES_AUTOHSCROLL
+    LTEXT           "интенсивность:",IDC_STATIC,19,29,72,8
+    GROUPBOX        "Тип волны",IDC_STATIC,7,52,172,31
+    CONTROL         "ТЕ - волна",IDC_RADIO_TE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,22,64,51,10
+    CONTROL         "ТМ - волна",IDC_RADIO_TM,"Button",BS_AUTORADIOBUTTON,
+                    110,64,53,10
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 209, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         187,IDC_STATIC,"Static",SS_BITMAP,113,8,83,66
+    LTEXT           "Расчет планарного волновода версия 3.0",IDC_STATIC,7,7,
+                    107,15,SS_NOPREFIX
+    LTEXT           "Copyright (C) ИАиЭ СО РАН 2000 г.",IDC_STATIC,45,98,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,80,113,50,14,WS_GROUP
+    LTEXT           "Разработчики программы:\nМалышев А. А.\nУстинов В. Б.",
+                    IDC_STATIC,7,36,101,27
+    LTEXT           """Лаборатория оптических информационных систем""",
+                    IDC_STATIC,14,86,180,8
+END
+
+IDD_DLG_ANDEREN DIALOG DISCARDABLE  0, 0, 303, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Моды в волноводе"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,177,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,246,122,50,14
+    GROUPBOX        "Выберете моду",IDC_STATIC,7,7,289,79
+    CONTROL         "волноводная",IDC_RADIO_F,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,18,18,60,10
+    CONTROL         "покровный слой - пленка (излучательная)",IDC_RADIO_CF,
+                    "Button",BS_AUTORADIOBUTTON,18,43,157,10
+    CONTROL         "пленка - подложка (излучательная)",IDC_RADIO_FS,"Button",
+                    BS_AUTORADIOBUTTON,18,68,135,10
+    CONTROL         139,IDC_STAT,"Static",SS_BITMAP,175,14,116,68
+    LTEXT           "Введите угол распространения:",IDC_STATIC,67,99,109,15
+    EDITTEXT        IDC_EDIT1,209,97,50,12
+    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,122,50,14
+END
+
+IDD_DLG_INPUT_UGOL DIALOG DISCARDABLE  0, 0, 176, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Допольный параметр"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,31,50,14
+    LTEXT           "Введите угол распространения ",IDC_STATIC,7,8,109,8
+    EDITTEXT        IDC_EDIT1,129,7,40,12
+    PUSHBUTTON      "Справка",IDC_BUTTON_HELP,7,31,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,119,31,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DLG_SETUP_VOLNOVOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_DLG_SETUP_IZLU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_DLG_ANDEREN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DLG_INPUT_UGOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Планарный волновод"
+    IDR_MDIVOLTYPE          "Демонстрационная программа\nwelle\nWelle.Document\nWelle Type (*.wel)\n.wel\nWelle\nWelle File"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Планарный волновод"
+    AFX_IDS_IDLEMESSAGE     "Готово"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Создать новый документ\nНовый"
+    ID_FILE_OPEN            "Открыть существующий документ\nОткрыть"
+    ID_FILE_CLOSE           "Закрыть активный документ\nЗакрыть"
+    ID_FILE_SAVE            "Сохранить активный документ\nСохранить"
+    ID_FILE_SAVE_AS         "Сохранить активный документ с новым именем\nСохранить как"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Изменение принтера и параметров печати\nНастройка печати"
+    ID_FILE_PRINT           "Печатать активный документ\nПечать"
+    ID_FILE_PRINT_PREVIEW   "Показать полную страницу\nПросмотр печати."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Информация о программе и авторах\nО программе"
+    ID_APP_EXIT             "Выход из приложения; запрос на сохранение документа\nВыход"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Открыть другое окно для активного документа\nНовое окно"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Распределить окна как перекрывающиеся\nКаскадом"
+    ID_WINDOW_TILE_HORZ     "Распределить окна как неперекрывающиеся части\nРазделить окна"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Показать или скрыть панель инструментов\n"
+    ID_VIEW_STATUS_BAR      "Показать или скрыть статусную строку\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_VOLNOVOD        "Параметры волновода"
+    ID_EDIT_IZLU            "Параметры излучения"
+    ID_EDIT_ANDEREN         "Тип моды: волноводная, излучательная."
+    ID_VIEW_GFAF            "Показывает графическое решение нахождения угла распространения волны в волноводе"
+    ID_                     "Показывает вид моды в поперечном сечении волновода"
+    ID_VIEW_MODE            "Показывает поперечное сечение моды в волноводе"
+    ID_VIEW_GRAF            "Графическое решение."
+    ID_VIEW_REFRESH         "Обновляет текущий вид окна"
+    ID_VIEW_TE_TM_1         "Зависимость фазовых сдвигов от угла распространения"
+    ID_VIEW_TE_TM           "Зависимость фазовых сдвигов от угла распространения"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_DIGITAL         "Показывает численное решение дисперсионного уравнения\n"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MDIVolna.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_EDIT_VOLNOVOD,       VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_VIEW_GRAF,           VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_IZLU,           VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_VIEW_MODE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          ID_EDIT_ANDEREN,        VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_VIEW_TE_TM,          VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          ID_VIEW_TE_TM_1,        VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_VIEW_DIGITAL,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MDIVolna MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MDIVolna\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MDIVolna.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MDIVolna Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MDIVolna.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
