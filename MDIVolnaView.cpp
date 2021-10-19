@@ -268,7 +268,7 @@ void CMDIVolnaView::Net(CDC* pDC)
 	}
 	pDC->SelectObject(old_pen);
 
-	//Подпись к графику
+	//ГЏГ®Г¤ГЇГЁГ±Гј ГЄ ГЈГ°Г ГґГЁГЄГі
 	pDC->TextOut(int(1500. - dc.GetTextExtent("0", 1).cx*2),
 		rect.bottom + 300 + 2*tm.tmHeight,"0", 1);
 	pDC->TextOut(int(1500. - dc.GetTextExtent("180", 3).cx*1.5),
@@ -283,7 +283,7 @@ void CMDIVolnaView::Net(CDC* pDC)
 	pDC->TextOut(int(1500. - dc.GetTextExtent("90", 2).cx*1.7),
 		int(- 2250.+ (rect.bottom + 2900 + 2*tm.tmHeight)/9*3),"90", 2);
 	
-	//Подписываем градусы для этих подписей
+	//ГЏГ®Г¤ГЇГЁГ±Г»ГўГ ГҐГ¬ ГЈГ°Г Г¤ГіГ±Г» Г¤Г«Гї ГЅГІГЁГµ ГЇГ®Г¤ГЇГЁГ±ГҐГ©
 	pDC->SelectObject(small_font);
 	pDC->TextOut(int(1500. - dc.GetTextExtent("0", 1).cx*.8),
 		rect.bottom + 300 + 2*tm.tmHeight,"0", 1);
@@ -299,7 +299,7 @@ void CMDIVolnaView::Net(CDC* pDC)
 	pDC->TextOut(int(1500. - dc.GetTextExtent("90", 2).cx*.5),
 		int(- 2250. + (rect.bottom + 2900 + 2*tm.tmHeight)/9*3),"0", 1);
 	
-	//Подписываем тета
+	//ГЏГ®Г¤ГЇГЁГ±Г»ГўГ ГҐГ¬ ГІГҐГІГ 
 	pDC->SelectObject(symb_font);
 	dc.SelectObject(symb_font);	
 	pDC->TextOut(rect.right - 900,
@@ -320,7 +320,7 @@ void CMDIVolnaView::OnSize(UINT nType, int cx, int cy)
 	CMDIVolnaDoc *pDoc = (CMDIVolnaDoc *) GetDocument();
 	ASSERT_VALID(pDoc);
 
-	// Записываем новые размеры окна в член класса CMDIVolnaView::rect
+	// Г‡Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Г­Г®ГўГ»ГҐ Г°Г Г§Г¬ГҐГ°Г» Г®ГЄГ­Г  Гў Г·Г«ГҐГ­ ГЄГ«Г Г±Г±Г  CMDIVolnaView::rect
 	CClientDC dc(this);
 	dc.SetMapMode(MM_HIMETRIC);
 	GetClientRect(&rect);
@@ -350,7 +350,7 @@ void CMDIVolnaView::OnEditAnderen()
 }
 
 //*********************************************************************	
-//			Левый график - зависимость Fc от угла
+//			The first graph is the dependence of the Fc from the corner
 //*********************************************************************	
 
 void CMDIVolnaView::PaintFc(CDC* pDC)
@@ -363,9 +363,9 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	old_font = pDC->SelectObject(cur_font);
 	pDC->GetTextMetrics(&tm);
 	pDC->SelectObject(cur_font);
-	//Подпись к графику:
-	CString title("Зависимость фазовых сдвигов на границах от угла распространения");
-	CString type, TE("для TE - волны"), TM("для TM - волны");
+	//ГЏГ®Г¤ГЇГЁГ±Гј ГЄ ГЈГ°Г ГґГЁГЄГі:
+	CString title("Dependence of phase shifts at the boundaries on the propagation angle");
+	CString type, TE("For TE wave"), TM("For TM wave");
 	shift = pDC->GetTextExtent(title);
 	pDC->TextOut(rect.right/2 - shift.cx/2,
 		- int(tm.tmHeight * 1.), title);
@@ -378,7 +378,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	char str[84];	
 	int len = tm.tmAveCharWidth*11;
 	
-	//Рисуем нормальные символы
+	//Picture of normal symbols:
 	pDC->SelectObject(cur_font_it);
 	pDC->TextOut(rect.right/2 - len/2, 
 			- int(tm.tmHeight * 3.5), "n", 1 );
@@ -387,7 +387,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->TextOut(rect.right/2 + len/2 + 500, 
 			- int(tm.tmHeight * 3.5), "n", 1 );
 
-	//Рисуем маленькие символы:
+	//Draw small symbols:
 	pDC->SelectObject(small_font);
 	pDC->TextOut(rect.right/2 - len/2 + int(tm.tmAveCharWidth*1.3), 
 		- int(tm.tmHeight * 4), "c", 1);
@@ -398,7 +398,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	
 	pDC->SelectObject(cur_font);
 	
-	//Подписываем значения к символам Nc, Nf, Nc
+	//Write values to the symbols Nc, Nf, Nc
 	sprintf(str, "= %.4f", pDoc->vol.Nc);
 	title = str;
 	pDC->TextOut(rect.right/2 - len/2 + 3 * tm.tmAveCharWidth, 
@@ -412,7 +412,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->TextOut(rect.right/2 + len/2 + 500 + 3 * tm.tmAveCharWidth, 
 			- int(tm.tmHeight * 3.5), title);
 
-	//Подписи к сетке
+	//Grid captions
 	pDC->SelectObject(symb_font);
 	
 	pDC->SetTextColor(RGB(255, 0, 0));
@@ -459,7 +459,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->TextOut(rect.right/2 -  int(pDC->GetTextExtent("60", 2).cx/2.),
 		- 2500 + (rect.bottom + 3500)/9*3 + int(pDC->GetTextExtent("60",2).cy*.5), "60");
 	
-	//Подписываем градусы
+	//Write grades
 	pDC->SelectObject(small_font);
 	pDC->TextOut(1500 - int(pDC->GetTextExtent("0",1).cx*.2),
 		rect.bottom + 900, "0", 1);
@@ -481,7 +481,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->TextOut(rect.right/2 +  int(pDC->GetTextExtent("60", 2).cx/2.),
 		- 2500 + (rect.bottom + 3500)/9*3 + int(pDC->GetTextExtent("60",2).cy*.5), "0", 1);
 	
-	//Рисуем сетку для графика
+	//Drawing a grid for the graph
 	CPen pen(PS_SOLID, 1, RGB(125, 125, 125));
 	CPen* old_pen = pDC->SelectObject(&pen);
 
@@ -489,7 +489,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->MoveTo(1500, - 2500);
 	double koef =((double)rect.right/2 - 2000.)/9.;
 	for(i = 0; i<10; i++)
-	{	// вертикальные линии
+	{	// vertical lines
 		pDC->LineTo(int(1500 + koef*(double)i), rect.bottom + 1000);
 		pDC->MoveTo(int(1500 + koef*(double)(i+1)), -2500);
 	}
@@ -497,14 +497,14 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 	pDC->MoveTo(1500, -2500);
 	koef = ((double)rect.bottom + 3500)/9.;
 	for(i = 0; i<10; i++)
-	{	// горизонтальные линии
+	{	// ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГјГ­Г»ГҐ Г«ГЁГ­ГЁГЁ
 		pDC->LineTo(rect.right/2 - 500,int(-2500 + koef*(double)i) );
 		pDC->MoveTo(1500, int(-2500 + koef*(double)(i+1)) );
 	}
 
 	pDC->SelectObject(old_pen);
 
-	//Рисуем график:
+	//Draw graph:
 
 	pDC->MoveTo(rect.right/2 - 500, - 2500);
 	CPoint point;
@@ -527,7 +527,7 @@ void CMDIVolnaView::PaintFc(CDC* pDC)
 }
 
 //*********************************************************************	
-//			Правый график - зависимость Fs от угла
+//			The right graph is the dependence of the Fs from the corner
 //*********************************************************************	
 void CMDIVolnaView::PaintFs(CDC* pDC)
 {
@@ -538,7 +538,7 @@ void CMDIVolnaView::PaintFs(CDC* pDC)
 	CPen* old_pen = pDC->SelectObject(&pen);
 
 	int i;
-	//Вертикальные линии:
+	//Vertical lines:
 
 	pDC->MoveTo(rect.right/2 + 500, -2500);
 	double koef =((double)rect.right/2 - 2000)/9.;
@@ -548,7 +548,7 @@ void CMDIVolnaView::PaintFs(CDC* pDC)
 		pDC->MoveTo(int(rect.right/2 + 500 + koef*(double)(i+1)), -2500);
 	}
 
-	//Горизонтальные линии:
+	//Horizontal lines:
 
 	pDC->MoveTo(rect.right/2 + 500, -2500);
 	koef = ((double)rect.bottom + 3500)/9.;
@@ -560,7 +560,7 @@ void CMDIVolnaView::PaintFs(CDC* pDC)
 
 	pDC->SelectObject(old_pen);
 
-	//Рисуем график:
+	//Draw Graph:
 
 	pDC->MoveTo(rect.right - 1500, - 2500);
 	CPoint point;
@@ -592,37 +592,36 @@ void CMDIVolnaView::Calculate(int flag, CDC* pDC)
 	pDC->Rectangle(-10, 10, rect.right + 10, rect.bottom - 10);
 
 	
-	// Проверяем на допустимость параметры
-	//В подложку
+	//Please check the accessibility of the parameters in support
 	if(pDoc->vol.mode == 2)
 	{
 		if(pDoc->vol.Teta < asin(pDoc->vol.Nc/pDoc->vol.Nf) ||
 			pDoc->vol.Teta > asin(pDoc->vol.Ns/pDoc->vol.Nf))
 		{
-			MessageBox("Выбранные вами параметры не соответствуют\n"
-					   "случаю излучательных мод в подложку.Вам следует\n"
-					   "либо поменять параметры волновода либо \n"
-					   "рассматривать другой случай.");
+			MessageBox("The options you selected are not\n"
+				   "correspond to the case of emitting modes into the substrate.\n"
+			 	   "You should either change parameters of the waveguide\n"
+				   "or consider another case.");
 			return;
 		}
 	}
-	//В обе стороны
+	//Both sides
 	if(pDoc->vol.mode == 1)
 	{
 		if(!(pDoc->vol.Teta < asin(pDoc->vol.Nc/pDoc->vol.Nf) ||
 			pDoc->vol.Teta > 0) )
 		{
-			MessageBox("Выбранные вами параметры не соответствуют\n"
-					   "случаю излучательных мод в подложку и пок-\n"
-					   "ровный слой. Вам следует либо поменять пара-\n"
-					   "метры волновода либо рассматривать другой случай.");
+			MessageBox("The options you selected are not appropriate for the case\n"
+				   "emitting modes into the substrate and cover layer. To you\n"
+				   "either change the parameters of the waveguide\n" 
+				   "or consider another case.");
 			return;
 		}
 	}
 	if(pDoc->vol.h < pDoc->vol.lambda/2.)
 	{
-		MessageBox("Толщина пленки должна быть больше половины длины волны. Следует\n"
-			"либо уменьшить длину волны, либо увеличить толщину", "Ошибка");
+		MessageBox("The film thickness should be more than half the wavelength.\n"
+			   "Either reduce the wavelength or increase the thickness", "Error");
 		return;
 	}
 	
@@ -668,7 +667,7 @@ void CMDIVolnaView::Paint_Graf_Define(CDC *pDC)
 	}
 	pDC->SelectObject(old_pen);
 
-	//Рисуем первую часть дисп. уравнения
+	//ГђГЁГ±ГіГҐГ¬ ГЇГҐГ°ГўГіГѕ Г·Г Г±ГІГј Г¤ГЁГ±ГЇ. ГіГ°Г ГўГ­ГҐГ­ГЁГї
 
 	CPen pen_array[5];
 	pen_array[0].CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
@@ -677,7 +676,7 @@ void CMDIVolnaView::Paint_Graf_Define(CDC *pDC)
 	pen_array[3].CreatePen(PS_SOLID, 1, RGB(0, 255, 255));
 	pen_array[4].CreatePen(PS_SOLID, 1, RGB(255, 0, 255));
 	
-	//Здесь рисуются первые 5 мод
+	//Г‡Г¤ГҐГ±Гј Г°ГЁГ±ГіГѕГІГ±Гї ГЇГҐГ°ГўГ»ГҐ 5 Г¬Г®Г¤
 	for(int i = 0; i<5; i++)
 	{
 		pDC->SelectObject(&pen_array[i]);
@@ -708,7 +707,7 @@ void CMDIVolnaView::Paint_Graf_Define(CDC *pDC)
 	pDC->MoveTo(1500,rect.bottom + 400 + 2*tm.tmHeight - 
 			int(koef_y*(2*PI/pDoc->vol.lambda*pDoc->vol.Nf*pDoc->vol.h - pDoc->vol.v*PI)));
 	
-	//Здесь рисуется мода, выбранная by user
+	//Г‡Г¤ГҐГ±Гј Г°ГЁГ±ГіГҐГІГ±Гї Г¬Г®Г¤Г , ГўГ»ГЎГ°Г Г­Г­Г Гї by user
 	for(d = 0.; d <= PI/2; d +=PI/5000)
 	{
 		point.x = int(1500. + d*koef_x);
@@ -765,9 +764,9 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	old_font = pDC->SelectObject(cur_font);
 	pDC->GetTextMetrics(&tm);
 	pDC->SelectObject(cur_font);
-	//Подпись к графику:
-	CString title("Зависимость фазовых сдвигов на границах от угла распространения");
-	CString type, TE("для TE - волны"), TM("для TM - волны");
+	//ГЏГ®Г¤ГЇГЁГ±Гј ГЄ ГЈГ°Г ГґГЁГЄГі:
+	CString title("Dependence of phase shifts at the boundaries on the propagation angle");
+	CString type, TE("For TE wave"), TM("For TM wave");
 	shift = pDC->GetTextExtent(title);
 	pDC->TextOut(rect.right/2 - shift.cx/2,
 		- int(tm.tmHeight * 1.), title);
@@ -779,7 +778,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	
 	char str[84];	
 	int len = tm.tmAveCharWidth*11;
-	//Рисуем нормальные символы
+	//ГђГЁГ±ГіГҐГ¬ Г­Г®Г°Г¬Г Г«ГјГ­Г»ГҐ Г±ГЁГ¬ГўГ®Г«Г»
 	pDC->TextOut(rect.right/2 - len/2, 
 			- int(tm.tmHeight * 3.5), "n", 1 );
 	pDC->TextOut(rect.right/2 - len/2 - 500 - len, 
@@ -787,7 +786,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	pDC->TextOut(rect.right/2 + len/2 + 500, 
 			- int(tm.tmHeight * 3.5), "n", 1 );
 
-	//Рисуем маленькие символы:
+	//ГђГЁГ±ГіГҐГ¬ Г¬Г Г«ГҐГ­ГјГЄГЁГҐ Г±ГЁГ¬ГўГ®Г«Г»:
 	pDC->SelectObject(small_font);
 	pDC->SelectObject(small_font);
 	pDC->TextOut(rect.right/2 - len/2 + int(tm.tmAveCharWidth*1.3), 
@@ -800,7 +799,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	pDC->SelectObject(cur_font);
 	pDC->SelectObject(cur_font);
 	
-	//Подписываем значения к символам Nc, Nf, Nc
+	//ГЏГ®Г¤ГЇГЁГ±Г»ГўГ ГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГї ГЄ Г±ГЁГ¬ГўГ®Г«Г Г¬ Nc, Nf, Nc
 	sprintf(str, "= %.4f", pDoc->vol.Nc);
 	title = str;
 	pDC->TextOut(rect.right/2 - len/2 + 3 * tm.tmAveCharWidth, 
@@ -814,7 +813,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	pDC->TextOut(rect.right/2 + len/2 + 500 + 3 * tm.tmAveCharWidth, 
 			- int(tm.tmHeight * 3.5), title);
 
-	//Подписи к сетке
+	//ГЏГ®Г¤ГЇГЁГ±ГЁ ГЄ Г±ГҐГІГЄГҐ
 	pDC->SelectObject(symb_font);
 	pDC->SelectObject(symb_font);
 	
@@ -856,7 +855,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	pDC->TextOut(rect.right - 4000 + int(pDC->GetTextExtent("60", 2).cx*.2),
 		- 2500 + (rect.bottom + 4000)/9*3 + int(pDC->GetTextExtent("60",2).cy*.5), "60");
 	
-	//Подписываем градусы
+	//ГЏГ®Г¤ГЇГЁГ±Г»ГўГ ГҐГ¬ ГЈГ°Г Г¤ГіГ±Г»
 	pDC->SelectObject(small_font);
 	pDC->TextOut(4000 - int(pDC->GetTextExtent("0",1).cx*.2),
 		rect.bottom + 1400, "0", 1);
@@ -872,14 +871,14 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 		- 2500 + (rect.bottom + 4000)/9*3 + int(pDC->GetTextExtent("60",2).cy*.5), "0", 1);
 	
 	
-	//Рисуем сетку для графика
+	//ГђГЁГ±ГіГҐГ¬ Г±ГҐГІГЄГі Г¤Г«Гї ГЈГ°Г ГґГЁГЄГ 
 	pDC->SelectObject(&gray_pen);
 
 	int i;
 	pDC->MoveTo(4000, - 2500);
 	double koef =((double)rect.right - 8000.)/9.;
 	for(i = 0; i<10; i++)
-	{	// вертикальные линии
+	{	// ГўГҐГ°ГІГЁГЄГ Г«ГјГ­Г»ГҐ Г«ГЁГ­ГЁГЁ
 		pDC->LineTo(int(4000 + koef*(double)i), rect.bottom + 1500);
 		pDC->MoveTo(int(4000 + koef*(double)(i+1)), -2500);
 	}
@@ -887,14 +886,14 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 	pDC->MoveTo(4000, -2500);
 	koef = ((double)rect.bottom + 4000)/9.;
 	for(i = 0; i<10; i++)
-	{	// горизонтальные линии
+	{	// ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГјГ­Г»ГҐ Г«ГЁГ­ГЁГЁ
 		pDC->LineTo(rect.right - 4000,int(-2500 + koef*(double)i) );
 		pDC->MoveTo(4000, int(-2500 + koef*(double)(i+1)) );
 	}
 
 	pDC->SelectObject(&old_pen);
 
-	//Рисуем график1:
+	//ГђГЁГ±ГіГҐГ¬ ГЈГ°Г ГґГЁГЄ1:
 
 	pDC->MoveTo(rect.right - 4000, - 2500);
 	CPoint point;
@@ -911,7 +910,7 @@ void CMDIVolnaView::PaintFx(CDC* pDC)
 		pDC->LineTo(point);
 	}
 	
-	//А теперь график 2:
+	//ГЂ ГІГҐГЇГҐГ°Гј ГЈГ°Г ГґГЁГЄ 2:
 	pDC->MoveTo(rect.right - 4000, - 2500);
 	pDC->SelectObject(&blue_pen);
 	point.y = -2500;
@@ -983,8 +982,8 @@ void CMDIVolnaView::OnViewDigital()
 	
 		if(pDoc->vol.h < pDoc->vol.lambda/2.)
 		{
-			MessageBox("Толщина пленки должна быть больше половины длины волны. Следует\n"
-				"либо уменьшить длину волны, либо увеличить толщину", "Ошибка");
+			MessageBox("The film thickness should be more than half the wavelength.\n"
+				   "Either reduce the wavelength or increase the thickness", "Error");
 			return;
 		}
 	
@@ -993,24 +992,24 @@ void CMDIVolnaView::OnViewDigital()
 		if(pDoc->vol.FindenTeta() == ERROR_INTERVAL)
 		{
 			type = MB_ICONERROR;
-			sprintf(str, "Мода %d не является волноводной.", pDoc->vol.v);
+			sprintf(str, "Mode %d is not a waveguide type.", pDoc->vol.v);
 		}
 		else 
 		{
 			pDoc->vol.calculate_Xi();
 			type = MB_ICONINFORMATION;
-			sprintf(str, "Угол распространения равен  %.2f  (в градусах)\n"
-						 "Глубина проникновения равна\n"
-						 "( вторая цифра - в процентах к толщине пленки ):\n"
-						 "в покровный слой:        %.3f (мкм)  --   %.2f\n"
-						"в подложку:                   %.3f (мкм)  --   %.2f\n"
-						"Эффективная толщина волновода   --  %.3f (мкм)",
+			sprintf(str, "The propagation angle is  %.2f  (in grades)\n"
+						 "The penetration depth is\n"
+						 "( the second digit is a percentage of the film thickness ):\n"
+						 "into the covering layer:        %.3f (micron)  --   %.2f\n"
+						"into the substrate:                   %.3f (micron)  --   %.2f\n"
+						"Effective fiber thickness   --  %.3f (micron)",
 						pDoc->vol.FindenTeta()*180/PI,
 						pDoc->vol.Xc*1e6, (pDoc->vol.Xc/pDoc->vol.h*100),
 						pDoc->vol.Xs*1e6, (pDoc->vol.Xs/pDoc->vol.h*100),
 						(pDoc->vol.h + pDoc->vol.Xc + pDoc->vol.Xs)*1e6 );
 		}
-		MessageBox(str, "Численное решение", type);
+		MessageBox(str, "Numerical solution", type);
 	delete []str;
 }
 
@@ -1045,7 +1044,7 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 		-2500 + 3*(rect.bottom + 3500)/4);
 	pDC->LineTo(3*rect.right/4,
 		- 2500 + 3*(rect.bottom + 3500)/4);
-	//Стрелки
+	//Г‘ГІГ°ГҐГ«ГЄГЁ
 	pDC->MoveTo(3*rect.right/4 - 500,
 		- 2500 + 3*(rect.bottom + 3500)/4 + 70);
 	pDC->LineTo(3*rect.right/4,
@@ -1069,7 +1068,7 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 		rect.bottom + 1000 + tm.tmHeight, "-h/2", 4);
 	pDC->TextOut(rect.right/2 - int(tm.tmAveCharWidth*5),
 		-2500 , "1.5h", 4);
-	//Черточки к h/2 и -h/2
+	//Г—ГҐГ°ГІГ®Г·ГЄГЁ ГЄ h/2 ГЁ -h/2
 	pDC->MoveTo(rect.right/2 - 100, -2500);
 	pDC->LineTo(rect.right/2 + 100, -2500);
 	pDC->MoveTo(rect.right/2 - 100, rect.bottom + 1000);
@@ -1077,7 +1076,7 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 	pDC->MoveTo(rect.right/2  - 100, - 2500 + (rect.bottom + 3500)/2 );
 	pDC->LineTo(rect.right/2  + 100, - 2500 + (rect.bottom + 3500)/2 );
 
-	//Ну а теперь попробуем нарисовать сечение:
+	//ГЌГі Г  ГІГҐГЇГҐГ°Гј ГЇГ®ГЇГ°Г®ГЎГіГҐГ¬ Г­Г Г°ГЁГ±Г®ГўГ ГІГј Г±ГҐГ·ГҐГ­ГЁГҐ:
 	CPen blue_pen(PS_SOLID, 1, RGB(0, 0, 255));
 	pDC->SelectObject(&blue_pen);
 	
@@ -1097,7 +1096,7 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 	
 	
 	
-	//Черточки для чайников
+	//Г—ГҐГ°ГІГ®Г·ГЄГЁ Г¤Г«Гї Г·Г Г©Г­ГЁГЄГ®Гў
 	p.y = int(rect.bottom + 1000. - (rect.bottom + 3500)/4. - koef_y*pDoc->vol.h + 100);
 	x = pDoc->vol.get_mode_amplitude(pDoc->vol.h);
 	p.x = int(rect.right/2 + koef_x*x);
@@ -1116,7 +1115,7 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 	pDC->LineTo(p);
 	pDC->TextOut(p.x , p.y , "Es", 2);
 
-	//Выводим значения для Es, Ec
+	//Enter the value for Es, Ec
 	pDC->SelectObject(cur_font_it);
 	pDC->SelectObject(cur_font_it);
 	
@@ -1151,14 +1150,14 @@ void CMDIVolnaView::PaintMode(CDC* pDC)
 }
 
 /*********************************************************/
-//Рисуем заголовок с полными параметрами
+//Drawing a header with full parameters
 /*********************************************************/
 void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 {
 	CClientDC dc(this);
 	CMDIVolnaDoc *pDoc = (CMDIVolnaDoc *) GetDocument();
 	CFont* old_font;
-	//Заголовки
+	//Г‡Г ГЈГ®Г«Г®ГўГЄГЁ
 	pDC->SelectObject(cur_font);
 	old_font = dc.SelectObject(cur_font);
 	dc.GetTextMetrics(&tm);
@@ -1166,21 +1165,21 @@ void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 	if(flag == VIEW_GRAF)
 	{
 		if(pDoc->vol.type_welle)
-		title = "Графическое решение дисперсионного уравнения для ТЕ - волны";
-		else title = "Графическое решение дисперсионного уравнения для ТM - волны";
+		title = "Graphics solution of the dispersion level for EE - wave";
+		else title = "Graphics solution of the dispersion level for the UM - wave";
 	}
 	if(flag == VIEW_MODE)
 	{
 		if(pDoc->vol.type_welle)
-		title = "Сечение моды для ТЕ - волны";
-		else title = "Сечение моды для ТM - волны";
+		title = "Mode tip for EM - wave";
+		else title = "Mode cross section for TM - waves";
 	}
 	pDC->TextOut(rect.right/2 - (dc.GetTextExtent(title)).cx/2, -int(tm.tmHeight * 1.), title);
 
 	pDC->SelectObject(small_font);
 	dc.SelectObject(small_font);
-	title = "Показано решение для первых пяти мод. ";
-	CString title1 = " Выбранная мода показана синим цветом";
+	title = "The solution for the first five modes is shown. ";
+	CString title1 = " The selected mod is shown in blue";
 	if(isPaint_5Mod)
 	{
 		pDC->TextOut(rect.right/2 - (dc.GetTextExtent(title + title1)).cx/2,
@@ -1202,7 +1201,7 @@ void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 	char str[84];	
 	int len = tm.tmAveCharWidth*17;
 	
-	//Рисуем наклоненные символы
+	//ГђГЁГ±ГіГҐГ¬ Г­Г ГЄГ«Г®Г­ГҐГ­Г­Г»ГҐ Г±ГЁГ¬ГўГ®Г«Г»
 	pDC->SelectObject(cur_font_it);
 	dc.SelectObject(cur_font_it);
 	pDC->TextOut(rect.right/2 - len/2, 
@@ -1216,13 +1215,13 @@ void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 	float p = 4; 
 	if(pDoc->vol.lambda >= 10e-6) p = 2.5;
 	pDC->TextOut(int(rect.right/2 - len/2 - 500 - p*tm.tmAveCharWidth), 
-			- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 2.5), "мкм", 3 );
+			- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 2.5), "Г¬ГЄГ¬", 3 );
 	if(pDoc->vol.h >= 10e-6) p = 2.5;
 	else p = 4.;
 	pDC->TextOut(int(rect.right/2 + len/2 + 500 + len - p*tm.tmAveCharWidth), 
-			- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 2.5), "мкм", 3 );
+			- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 2.5), "Г¬ГЄГ¬", 3 );
 	
-	//А теперь маленькие рядом с ними
+	//ГЂ ГІГҐГЇГҐГ°Гј Г¬Г Г«ГҐГ­ГјГЄГЁГҐ Г°ГїГ¤Г®Г¬ Г± Г­ГЁГ¬ГЁ
 	pDC->SelectObject(small_font);
 	dc.SelectObject(small_font);
 	pDC->TextOut(rect.right/2 - len/2 + int(tm.tmAveCharWidth*1.3), 
@@ -1232,7 +1231,7 @@ void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 	pDC->TextOut(rect.right/2 + len/2 + 500 + int(tm.tmAveCharWidth*1.3), 
 		- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 1.5), "s", 1);
 	
-	//Рисуем греческие буквы
+	//ГђГЁГ±ГіГҐГ¬ ГЈГ°ГҐГ·ГҐГ±ГЄГЁГҐ ГЎГіГЄГўГ»
 	pDC->SelectObject(symb_font);
 	dc.SelectObject(symb_font);
 	pDC->TextOut(rect.right/2 - len/2, 
@@ -1240,7 +1239,7 @@ void CMDIVolnaView::Title_big(bool isPaint_5Mod, CDC* pDC)
 	pDC->TextOut(rect.right/2 - len/2 - 500 - len, 
 			- int(tm.tmHeight * 1.5) - int(tm.tmHeight * 2.2), "l", 1 );
 	
-	//Подписываем значения к символам
+	//Subscribing values to symbols
 	pDC->SelectObject(cur_font);
 	dc.SelectObject(cur_font);
 	
