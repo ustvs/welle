@@ -153,7 +153,7 @@ void CDlgInputUgol::OnOK()
 		pDoc->vol.Teta = m_Ugol*PI/180;
 		CDialog::OnOK();
 	}
-	else MessageBox("Введите правильный угол","Сообщение");
+	else MessageBox("Enter Correct Corner", "Message");
 }
 
 BOOL CDlgInputUgol::OnInitDialog() 
@@ -169,9 +169,9 @@ void CDlgInputUgol::OnButtonHelp()
 {
 
 	char str[84];
-	sprintf(str, "Допустимый диапазон: %.3f - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI,
+	sprintf(str, "Available range: %.3f - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI,
 		asin(pDoc->vol.Ns/pDoc->vol.Nf)*180/PI);
-	MessageBox(str, "Справка");
+	MessageBox(str, "Help");
 }
 
 void CDlgSetupMode::OnButtonHelp() 
@@ -180,14 +180,14 @@ void CDlgSetupMode::OnButtonHelp()
 	UpdateData(true);
 	if(m_rb_F == 2)
 	{
-		sprintf(str, "Допустимый диапазон: %.3f - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI,
+		sprintf(str, "Available range: %.3f - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI,
 			asin(pDoc->vol.Ns/pDoc->vol.Nf)*180/PI);
-		MessageBox(str, "Справка", MB_ICONINFORMATION);
+		MessageBox(str, "Help", MB_ICONINFORMATION);
 	}
 	if(m_rb_F == 1)
 	{
-		sprintf(str, "Допустимый диапазон: 0 - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI);
-		MessageBox(str, "Справка", MB_ICONINFORMATION);
+		sprintf(str, "Available range: 0 - %.3f",asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI);
+		MessageBox(str, "Help", MB_ICONINFORMATION);
 	}
 }
 
@@ -199,7 +199,7 @@ void CDlgSetupMode::OnOK()
 	{
 		if((m_Ugol < asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI) || 
 			(m_Ugol > asin(pDoc->vol.Ns/pDoc->vol.Nf)*180/PI)  )
-			MessageBox("Недопустимый угол. Смотрите справку.", "Ошибка", MB_ICONSTOP);
+			MessageBox("Invalid angle. See help.", "Error", MB_ICONSTOP);
 		else
 			CDialog::OnOK();
 	}
@@ -208,7 +208,7 @@ void CDlgSetupMode::OnOK()
 	{
 		if((m_Ugol < 0) || 
 			(m_Ugol > asin(pDoc->vol.Nc/pDoc->vol.Nf)*180/PI)  )
-			MessageBox("Недопустимый угол. Смотрите справку.", "Ошибка", MB_ICONSTOP);
+			MessageBox("Invalid angle. See help.", "Error", MB_ICONSTOP);
 		else
 			CDialog::OnOK();
 	}
