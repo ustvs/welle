@@ -1,5 +1,5 @@
 This program is written in the year 2000 with cooperation with A. A. Malyschev.
-It will allow you to build a model of a waveguide.
+It allows you to build a model of a waveguide.
 
 ![fig 2 3](https://user-images.githubusercontent.com/63038350/138041369-3c773b50-c5a0-47d5-8154-738d3284454d.jpg)
 ![fig 2 4](https://user-images.githubusercontent.com/63038350/138041372-a3ba3476-e70b-469c-b925-3ae5fa34686f.jpg)
